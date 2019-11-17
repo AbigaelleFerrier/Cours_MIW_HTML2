@@ -1,0 +1,20 @@
+.icon {
+    height : 1em;
+    width  : 1em;
+    fill: currentColor;
+}
+
+a:hover {
+    .icon {
+        fill: currentColor;
+    }
+}
+
+.icon.big {
+    height : 1.5em;
+    width  : 1.5em;
+}
+
+svg text {
+    display: none;
+}

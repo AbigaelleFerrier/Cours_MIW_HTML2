@@ -1,0 +1,101 @@
+header {
+    background: $black;
+    color: #fff;
+    width: 100%;
+    height: 15vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+
+    @media only screen and (min-width: $BP0) {
+        padding: 0 2rem;
+    }
+
+    .logo {
+        width: 20%;
+        min-width: 120px;
+        height: 100%;
+        display: flex;
+
+        a {
+            align-self: center;
+            width: 100%;
+            img {
+                width: 100% !important;
+                // max-width: 200px;
+                // min-width: 100px;
+            }
+        } 
+    }
+
+    .titre {  
+        display: none;
+
+        @media only screen and (min-width: $BP0) {
+            display: initial;
+            width: 60%;
+            align-self: center; 
+            text-align: center;
+            font-family: monospace;
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+    }
+
+    .zoneIcon {
+        width: 20%;
+        display: flex;
+        align-self: center;
+        justify-content: flex-end;
+
+        a {
+            color: #fff;
+            padding: 0 1em;
+
+            &:hover {
+                text-decoration: none;
+                color: rgb(218, 218, 218);
+            }
+
+            span {
+                display: none;
+            }
+
+            .icon.big {
+                height : 1em;
+                width  : 1em;
+            }
+
+            &:last-child {
+                padding: 0 0 0 1em ;
+            }
+        }
+
+        .weather,.temperature {
+            display: none;
+        }
+
+        @media only screen and (min-width: $BP2) {
+            .weather,.temperature {
+                display: inherit;
+            }
+            .weather {
+                border-right: 1px solid #fff ;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $BP2) {
+        .logo,.zoneIcon,.titre {
+                width: 33.33%;
+        }
+
+        .logo a img{
+            max-width: 200px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+nav  {
+    background: url('../img/lauzanne_img.jpg');
+    background-size: cover ;
+    background-position: center ;
+    height: 55vh;
+    
+
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5rem;
+
+    @media only screen and (min-width: $BP0) {
+        padding: 0 2rem;
+    }
+
+    a {
+        background : $black;
+        color      : #fff;
+        font-family: monospace;
+        font-size  : 1.8rem;
+        text-align : center;
+        padding    : 1em 0;
+        width      : 100%;
+        margin     : 2px;
+
+        
+        position: relative;
+        top: 45vh;
+
+        &:hover {
+            background: lighten($black, 10%);
+            color :  darken(#fff, 10%);
+        }
+    }
+
+    @media only screen and (min-width: $BP2) {
+        height: 80vh;
+        flex-direction: row;
+
+        a {
+            position: initial;
+            align-self: flex-end; 
+            text-align: center;
+        }
+    }
+}
