@@ -1,10 +1,9 @@
 nav  {
-    background: url('../img/lauzanne_img.jpg');
-    background-size: cover ;
-    background-position: center ;
+    background: url('../img/lauzanne_img_SM.jpg');
+    background-position: bottom;
+    background-size: cover;
     height: 55vh;
     
-
     display: flex;
     flex-direction: column;
     padding: 0 0.5rem;
@@ -33,7 +32,21 @@ nav  {
         }
     }
 
+    @media only screen and (min-width: $BP1) {
+        background: url('../img/lauzanne_img_TB.jpg'); // Background Tablette
+        background-position: bottom;
+        background-size: cover;
+    }
+
     @media only screen and (min-width: $BP2) {
+        background: url('../img/lauzanne_img_LG_panorama2.jpg'); // Background grand ecran
+        background-position-x: 0px;
+        background-position-y: center;
+        background-size: 300%;
+        animation-duration: 20s;
+        animation-name: nav_carrousel;
+        animation-iteration-count: infinite;
+
         height: 80vh;
         flex-direction: row;
 

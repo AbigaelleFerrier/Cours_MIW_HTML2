@@ -52,40 +52,42 @@ header {
         align-self: center;
         justify-content: flex-end;
 
+        .weather {
+            display: none;
+        }
+
         a {
             color: #fff;
-            padding: 0 1em;
+            margin-left: 1.5em;
+            padding: 0.5em;
 
             &:hover {
                 text-decoration: none;
                 color: rgb(218, 218, 218);
-            }
-
-            span {
-                display: none;
+                border-radius: 20px;
+                background: #007494;
             }
 
             .icon.big {
                 height : 1em;
                 width  : 1em;
             }
-
-            &:last-child {
-                padding: 0 0 0 1em ;
-            }
         }
 
-        .weather,.temperature {
-            display: none;
-        }
+        
 
         @media only screen and (min-width: $BP2) {
-            .weather,.temperature {
-                display: inherit;
-            }
             .weather {
-                border-right: 1px solid #fff ;
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 29px !important;
+                    border-right : 1px solid #aaa ;
+                    padding-right: 8px;
+                    margin-right : 8px;
+                }
             }
+            
         }
     }
 

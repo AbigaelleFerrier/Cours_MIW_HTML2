@@ -501,9 +501,9 @@ svg text {
 }
 
 nav {
-  background: url("../img/lauzanne_img.jpg");
+  background: url("../img/lauzanne_img_SM.jpg");
+  background-position: bottom;
   background-size: cover;
-  background-position: center;
   height: 55vh;
   display: flex;
   flex-direction: column;
@@ -530,8 +530,22 @@ nav a:hover {
   background: rgba(26, 26, 26, 0.8);
   color: #e6e6e6;
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 768px) {
   nav {
+    background: url("../img/lauzanne_img_TB.jpg");
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1080px) {
+  nav {
+    background: url("../img/lauzanne_img_LG_panorama2.jpg");
+    background-position-x: 0px;
+    background-position-y: center;
+    background-size: 300%;
+    animation-duration: 20s;
+    animation-name: nav_carrousel;
+    animation-iteration-count: infinite;
     height: 80vh;
     flex-direction: row;
   }
@@ -592,36 +606,37 @@ header .zoneIcon {
   align-self: center;
   justify-content: flex-end;
 }
+header .zoneIcon .weather {
+  display: none;
+}
 header .zoneIcon a {
   color: #fff;
-  padding: 0 1em;
+  margin-left: 1.5em;
+  padding: 0.5em;
 }
 header .zoneIcon a:hover {
   text-decoration: none;
   color: #dadada;
-}
-header .zoneIcon a span {
-  display: none;
+  border-radius: 20px;
+  background: #007494;
 }
 header .zoneIcon a .icon.big {
   height: 1em;
   width: 1em;
 }
-header .zoneIcon a:last-child {
-  padding: 0 0 0 1em;
-}
-header .zoneIcon .weather, header .zoneIcon .temperature {
-  display: none;
-}
-@media only screen and (min-width: 960px) {
-  header .zoneIcon .weather, header .zoneIcon .temperature {
-    display: inherit;
-  }
+@media only screen and (min-width: 1080px) {
   header .zoneIcon .weather {
-    border-right: 1px solid #fff;
+    display: flex;
+    align-items: center;
+  }
+  header .zoneIcon .weather svg {
+    width: 29px !important;
+    border-right: 1px solid #aaa;
+    padding-right: 8px;
+    margin-right: 8px;
   }
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1080px) {
   header .logo, header .zoneIcon, header .titre {
     width: 33.33%;
   }
@@ -633,7 +648,7 @@ header .zoneIcon .weather, header .zoneIcon .temperature {
 .reseauxSociaux {
   display: none;
 }
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1080px) {
   .reseauxSociaux {
     display: flex;
     flex-direction: column;
@@ -693,5 +708,28 @@ header .zoneIcon .weather, header .zoneIcon .temperature {
 /***************
     Media Query 
 ****************/
+@keyframes nav_carrousel {
+  0% {
+    background-position-x: 0%;
+  }
+  24% {
+    background-position-x: 0%;
+  }
+  33% {
+    background-position-x: 50%;
+  }
+  58% {
+    background-position-x: 50%;
+  }
+  66% {
+    background-position-x: 100%;
+  }
+  92% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
